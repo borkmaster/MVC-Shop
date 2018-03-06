@@ -182,6 +182,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,6 +270,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,6 +281,24 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVC-Shop.Core\MVC-Shop.Core.csproj">
+      <Project>{34caf5bc-9696-4073-b4be-eaf83c6f503c}</Project>
+      <Name>MVC-Shop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC-Shop.DataAccess.InMemory\MVC-Shop.DataAccess.InMemory.csproj">
+      <Project>{f2ac8ddb-b160-4595-839f-1f0e311267d0}</Project>
+      <Name>MVC-Shop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC-Shop.DataAccess.SQL\MVC-Shop.DataAccess.SQL.csproj">
+      <Project>{b8f5412a-d3fc-48f3-b224-69c2beb16a67}</Project>
+      <Name>MVC-Shop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC-Shop.Services\MVC-Shop.Services.csproj">
+      <Project>{a5801e47-8cb7-4645-9d5d-ddc6cdc17777}</Project>
+      <Name>MVC-Shop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
