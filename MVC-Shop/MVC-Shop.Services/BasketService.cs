@@ -116,6 +116,7 @@ namespace MVC_Shop.Services
                               select new BasketItemViewModel()
                               {
                                   Id = b.Id,
+                                  Image = p.Image,
                                   Quantity = b.Quantity,
                                   ProductName = p.Name,
                                   Price = p.Price
